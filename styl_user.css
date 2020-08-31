@@ -1,0 +1,244 @@
+/*określenie wyglądu i ustawienia całej strony*/
+body 
+{
+	background-color: #DDE368;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'Cabin', sans-serif;
+}	
+
+/*określenie wyglądu i pozycji na stronie, poszczególnych divów*/
+.container
+{
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+
+.header
+{
+	letter-spacing: 1px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 30px;
+	padding: 12px 0;
+}
+
+/*stylizajca wyglądu i zachowania menu*/
+.menu
+{
+	margin-left: auto;
+	margin-right: auto;
+	border-top: 2px solid;
+	border-bottom: 2px solid;
+	background-color: #E5E5E5;
+	text-align: center;
+	padding: 12px 0;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+}	
+
+ol
+{
+	padding: 0%;
+	margin: 0%;
+	list-style-type: none;
+	font-size: 112.5%;
+	line-height: 200%;
+	display: inline-block;
+	height: 187.5%;
+	user-select: none;
+}
+
+ol a
+{
+	text-decoration: none;
+	display: block;
+	padding: 0 12px;
+	color: #000000;
+}
+
+
+ol > li
+{
+	float: left;
+	border-right: 1px solid;
+	height: 40px;
+}
+
+ol > li:first-child /*opisanie wyglądu pierwszego elementu menu (o nazwie "strona główna")*/
+{
+	border-left: 1px solid;
+}
+
+ol > li:hover /*stylizajca elementów menu po najechaniu nań myszką*/
+{
+	background-color: #D4D4D4;
+}
+
+ol > li:hover > a /*stylizajca linków w menu po najechaniu nań myszką*/
+{
+	color: #1F85DE;
+}
+
+.icon
+{
+	display: none;
+}
+
+.content
+{
+	padding: 50px 0;
+	font-size: 35px;
+	text-align: center;
+	color: #0A1EA7;
+}
+
+/*stylizacja przycisków*/
+input[type=submit]
+{
+	width: 300px;
+	background-color: #36b03c;
+	font-size:20px;
+	color: white;
+	padding: 15px 10px;
+	margin-top: 20px;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	letter-spacing: 2px;
+	outline: none;
+}
+
+/*stylizacja pola wyboru*/
+select {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 8px 12px;
+  margin: 8px 0;
+  background-color: #efefef;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+/*stylizacja pola wyboru po jego zaznaczeniu*/
+select:focus
+{
+	-webkit-box-shadow: 0px 0px 10px 2px rgba(204,204,204,0.9);
+	-moz-box-shadow: 0px 0px 10px 2px rgba(204,204,204,0.9);
+	box-shadow: 0px 0px 10px 2px rgba(204,204,204,0.9);
+	border: solid #1630DF;
+	background-color: #efefef;
+}
+
+/*stylizacja przycisku po jego wciśnięciu*/
+input[type=submit]:focus
+{
+	-webkit-box-shadow: 0px 0px 15px 5px rgba(204,204,204,0.9);
+	-moz-box-shadow: 0px 0px 15px 5px rgba(204,204,204,0.9);
+	box-shadow: 0px 0px 15px 5px rgba(204,204,204,0.9);
+}
+
+/*stylizacja przycisku po najechaniu na niego myszką*/
+input[type=submit]:hover
+{
+	background-color: #37b93d;
+}
+
+#tabela
+{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#tytul
+{
+	text-align: center;
+}
+	
+#plan
+{
+	color: #000000;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	position: relative;
+}	
+
+/*stylizacja divów, które przedstawiają poszczególne czujniki*/
+#czujnik_plomienia, #czujnik_dymu, #rop, #czujnik_temperatury, #czujnik_temperatury1
+{
+	width: 100px;
+    height: 60px;
+    text-align: center;
+	position: absolute;
+	user-select: none;    
+}
+
+/*stylizacja linków*/
+a
+{
+	text-decoration: none;
+}
+
+/*stylizacja zaznaczonego elementu menu*/
+.active
+{
+	background-color: #1FD2DE;
+}
+
+/*stylizacja menu dla różnych rozdzielczości ekranu (menu responsywne)*/
+@media screen and (max-width: 1500px)
+{
+	.menu
+	{
+		overflow: hidden;
+	}
+	
+	ol>li
+	{
+		height: 250%
+	}
+	
+	ol>li:not(:first-child)
+	{
+		display: none;
+		border: none;
+	}
+
+	ol>li:first-child
+	{
+		border: none;
+	}
+
+	ol>li:last-child
+	{
+		float: right;
+		display: block;
+	}
+
+	ol
+	{
+		display: block;
+	}
+
+	.menu.responsive ol>li
+	{
+		float: none;
+		display: block;
+		border: none;
+	}
+
+	.menu.responsive ol>li:last-child
+	{
+		background-color: #1FD2DE;
+	}
+}
